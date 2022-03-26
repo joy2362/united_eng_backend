@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\ClientController;
 use App\Http\Controllers\Admin\GalleryController;
@@ -35,6 +36,7 @@ Route::post('setting/change/icon', [SettingController::class,'change_icon'])->na
 Route::post('setting/change/about_us_image', [SettingController::class,'change_about_us_image'])->name('setting.about_us_image.change');
 
 // crud resource
-Route::resource('brand', BrandController::class);
-Route::resource('gallery', GalleryController::class);
-Route::resource('client', ClientController::class);
+Route::resource('brand', BrandController::class,array('except'=>['show']));
+Route::resource('gallery', GalleryController::class,array('except'=>['show']));
+Route::resource('client', ClientController::class,array('except'=>['show']));
+Route::resource('about-us', AboutController::class,array('only'=>['index','update']));

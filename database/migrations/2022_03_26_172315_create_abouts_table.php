@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('abouts', function (Blueprint $table) {
             $table->id();
+            $table->string('header');
+            $table->text('brief');
+            $table->longText('mission');
+            $table->longText('vision');
+            $table->longText('why');
             $table->timestamps();
         });
     }

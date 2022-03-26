@@ -36,6 +36,12 @@
                 </a>
             </li>
 
+            <li class="sidebar-item {{ request()->routeIs('about-us.*') ? 'active' : '' }}">
+                <a class="sidebar-link" href="{{ route('about-us.index') }}">
+                    <i class="align-middle" data-feather="info"></i> <span class="align-middle">About-us</span>
+                </a>
+            </li>
+
         </ul>
 
     </div>

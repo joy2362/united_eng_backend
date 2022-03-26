@@ -148,7 +148,6 @@ class SettingSeeder extends Seeder
             [
                 'name' => SettingName::WEEKDAY_END(),
                 'value' => "Thursday",
-
             ]
         );
 
